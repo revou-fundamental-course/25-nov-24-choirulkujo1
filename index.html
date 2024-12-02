@@ -4,25 +4,113 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css\styles.css">
+    <title>Kalkulator BMI</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
     <!-- Judul Website -->
-     <header>
+    <header class="main-header">
         <h1>Kalkulator BMI</h1>
-     </header>
-     <!-- Konten Website -->
-      <main>
-        <!-- main article -->
-         <article>
-            <p></p>
-         </article>
-      </main>
-      <!-- Footer Website -->
-       <footer>
+    </header>
+
+    <!-- Konten Website -->
+    <main>
+        <!-- Section Form Kalkulator BMI -->
+        <section class="main-section">
+            <!-- Main Article -->
+            <div>
+                <h2>Kalkulator BMI</h2>
+                <p style="text-align: justify;">Berat badan ideal adalah impian semua orang. Tidak hanya memiliki bentuk tubuh yang 
+                    menunjang penampilan, berat badan ideal juga menandakan kondisi tubuh yang sehat. Bagaimana 
+                    denganmu? Yuk, hitung sekarang di kalkulator BMI!</p>
+            </div>
+
+            <!-- Main Form -->
+            <form>
+                <div>
+                    <label for="jenis-kelamin-input">
+                        <b>Jenis Kelamin :</b>
+                    </label>
+                    <input type="radio" id="pria" name="gender" value="pria" checked> <b>Pria</b>
+                    <input type="radio" id="wanita" name="gender" value="wanita"> <b>Wanita</b>
+                </div>
+
+                <div class="form-item">            
+                    <label for="berat-badan-input">
+                        Berat Badan (kg):
+                    </label>
+                    <input type="number" id="berat-badan-input" />
+                </div>
+
+                <div class="form-item">
+                    <label for="usia-input">
+                        Usia (tahun):
+                    </label>
+                    <input type="number" id="usia-input" />
+                </div>
+
+                <div class="form-item">
+                    <label for="tinggi-badan-input">
+                        Tinggi Badan (cm):
+                    </label>
+                    <input type="number" id="tinggi-badan-input" />
+                </div>
+
+                <div class="form-button-container">
+                    <button class="bg-cadet-blue color-antique-white">Hitung BMI</button>
+                    <button class="bg-alice-blue">Reset</button>
+                </div>
+            </form>
+
+            <!-- Second Article -->
+            <article>
+                <header>
+                    <h3>Keunggulan Fitur
+                    </h3>
+                </header>
+
+                <ol>
+                    <li>Menghitung berat badan</li>
+                    <li>Menentukan kategori berat badan ideal atau tidak</li>
+                    <li>Mempersiapkan program penurunan berat badan</li>
+                </ol>
+
+                <p style="text-align: justify;">Kalkulator ini hanya boleh digunakan oleh orang dewasa (wanita hamil atau menyusui tidak boleh mengandalkan pembacaan BMI 
+                    ini) dan tidak ada tindakan yang harus diambil berdasarkan nilainya selain berkonsultasi dengan orang yang memenuhi 
+                    syarat seperti dokter.</p>
+                
+                 <p style="text-align: justify;">Kalkulator akan memberi Anda gambaran tentang perbandingan berat badan Anda dengan nilal umum. Indeks Massa Tubuh
+                     (atau BMI) dihitung sebagai berat badan Anda (dalam kilogram) dibagi dengan kuadrat tinggi badan Anda (dalam meter) atau BMI=Kg/M².</p>
+            </article>
+        </section>
+
+        <!-- Section Hasil Kalkulasi -->
+        <section class="main-section">
+            <header>
+                <h2>Hasil</h2>
+            </header>
+            <div class="container">
+            
+                <p>Berat Badan Lebih</p>
+
+                <div id="result-calculation" class="hidden">0</div>
+
+                <p id="info-result" class="hidden">Anda memiliki berat badan</p>
+            </div>
+
+            <!-- Third Article -->
+            <article>
+                <p>Lorem Ipsum Dolor Sit Amet Adipiscing ....</p>
+            </article>
+        </section>
+    </main>
+
+    <!-- Footer Website -->
+    <footer>
         <p>Made by Choirul Anam@2024</p>
-       </footer>
+    </footer>
+    <script src="/js/script.js"></script>
 </body>
+
 </html>

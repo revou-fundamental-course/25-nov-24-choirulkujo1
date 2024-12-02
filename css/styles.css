@@ -1,1 +1,96 @@
-/* Ini adalah file CSS */
+/* Ini File CSS */
+
+.main-header {
+    text-align: center;
+    background-color: #f2f2f2;
+    padding: 16px;
+}
+
+h1 {
+    color: darkblue;
+
+}
+
+
+main {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.main-section {
+    width: 40%;
+    background-color: #f2f2f2;
+    padding: 40px;
+    margin: 16px;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #2d88a5;
+    color: white;
+}
+
+form {
+    background-color: #2d88a5;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.form-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+input[type=number] {
+    width: 40%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-button-container {
+    margin-top: 32px;
+}
+
+button {
+    border: 0;
+    padding: 8px;
+    border-radius: 4px;
+}
+
+.bg-cadet-blue {
+    background-color: cadetblue;
+}
+
+.bg-alice-blue {
+    background-color: aliceblue;
+}
+
+.color-antique-white {
+    color: antiquewhite;
+}
+
+.container {
+    max-width: 600px;
+    margin: 20px;
+    background: #2d88a5;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+}
