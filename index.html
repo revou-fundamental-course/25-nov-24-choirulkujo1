@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kalkulator BMI</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -14,103 +17,110 @@
         <h1>Kalkulator BMI</h1>
     </header>
 
-    <!-- Konten Website -->
+    <!-- Konten utama -->
     <main>
-        <!-- Section Form Kalkulator BMI -->
-        <section class="main-section">
-            <!-- Main Article -->
-            <div>
+        <div class="container">
+            <div class="calculator">
+                <!-- Judul dan deskripsi Kalkulator BMI -->
                 <h2>Kalkulator BMI</h2>
-                <p style="text-align: justify;">Berat badan ideal adalah impian semua orang. Tidak hanya memiliki bentuk tubuh yang 
-                    menunjang penampilan, berat badan ideal juga menandakan kondisi tubuh yang sehat. Bagaimana 
-                    denganmu? Yuk, hitung sekarang di kalkulator BMI!</p>
-            </div>
-
-            <!-- Main Form -->
-            <form>
-                <div>
-                    <label for="jenis-kelamin-input">
-                        <b>Jenis Kelamin :</b>
-                    </label>
-                    <input type="radio" id="pria" name="gender" value="pria" checked> <b>Pria</b>
-                    <input type="radio" id="wanita" name="gender" value="wanita"> <b>Wanita</b>
-                </div>
-
-                <div class="form-item">            
-                    <label for="berat-badan-input">
-                        Berat Badan (kg):
-                    </label>
-                    <input type="number" id="berat-badan-input" />
-                </div>
-
-                <div class="form-item">
-                    <label for="usia-input">
-                        Usia (tahun):
-                    </label>
-                    <input type="number" id="usia-input" />
-                </div>
-
-                <div class="form-item">
-                    <label for="tinggi-badan-input">
-                        Tinggi Badan (cm):
-                    </label>
-                    <input type="number" id="tinggi-badan-input" />
-                </div>
-
-                <div class="form-button-container">
-                    <button class="bg-cadet-blue color-antique-white">Hitung BMI</button>
-                    <button class="bg-alice-blue">Reset</button>
-                </div>
-            </form>
-
-            <!-- Second Article -->
-            <article>
-                <header>
-                    <h3>Keunggulan Fitur
-                    </h3>
-                </header>
-
-                <ol>
-                    <li>Menghitung berat badan</li>
-                    <li>Menentukan kategori berat badan ideal atau tidak</li>
-                    <li>Mempersiapkan program penurunan berat badan</li>
-                </ol>
-
-                <p style="text-align: justify;">Kalkulator ini hanya boleh digunakan oleh orang dewasa (wanita hamil atau menyusui tidak boleh mengandalkan pembacaan BMI 
-                    ini) dan tidak ada tindakan yang harus diambil berdasarkan nilainya selain berkonsultasi dengan orang yang memenuhi 
-                    syarat seperti dokter.</p>
+                <p style="text-align: justify;"> Berat badan ideal adalah impian semua orang. Tidak hanya memiliki bentuk tubuh 
+                    yang menunjang penampilan, berat badan ideal juga menandakan kondisi tubuh yang sehat.
+                    Bagaimana denganmu? Yuk, hitung sekarang di kalkulator BMI!
+                </p>
                 
-                 <p style="text-align: justify;">Kalkulator akan memberi Anda gambaran tentang perbandingan berat badan Anda dengan nilal umum. Indeks Massa Tubuh
-                     (atau BMI) dihitung sebagai berat badan Anda (dalam kilogram) dibagi dengan kuadrat tinggi badan Anda (dalam meter) atau BMI=Kg/M².</p>
-            </article>
-        </section>
-
-        <!-- Section Hasil Kalkulasi -->
-        <section class="main-section">
-            <header>
-                <h2>Hasil</h2>
-            </header>
-            <div class="container">
-            
-                <p>Berat Badan Lebih</p>
-
-                <div id="result-calculation" class="hidden">0</div>
-
-                <p id="info-result" class="hidden">Anda memiliki berat badan</p>
+                <!-- Form untuk menghitung BMI -->
+                <form>
+                    <!-- Input untuk memilih jenis kelamin -->
+                    <label for="jenis-kelamin">Jenis Kelamin</label>
+                    <div class="jenis-kelamin">
+                        <label><input type="radio" name="jenis-kelamin" value="laki-laki" required>Laki-laki</label>
+                        <label><input type="radio" name="jenis-kelamin" value="perempuan" required>Perempuan</label>
+                    </div>
+                    
+                    <!-- Input berat badan user -->
+                    <div class="form-item">
+                        <label for="berat-badan"> Berat badan (Kg) </label>
+                        <input type="number" id="berat-badan" placeholder="Masukkan Berat Badan" required/>
+                    </div>
+                    
+                    <!-- Input usia user -->
+                    <div class="form-item">
+                        <label for="usia"> Usia (Tahun) </label>
+                        <input type="number" id="usia" placeholder="Masukkan Usia" required/>
+                    </div>
+                    
+                    <!-- Input tinggi badan user -->
+                    <div class="form-item">
+                        <label for="tinggi-badan-input"> Tinggi badan (cm) </label>
+                        <input type="number" id="tinggi-badan" placeholder="Masukkan Tinggi Badan" required/>
+                    </div>
+                    
+                    <!-- Tombol untuk menghitung dan mereset data -->
+                    <div class="tombol">
+                        <button class="tombol-hitung" type="button" onclick="hitung()">Hitung BMI</button>
+                        <button class="tombol-reset" type="button" onclick="resetform()">Reset</button>
+                    </div>
+                </form> 
+                
+                <!-- Bagian fitur keunggulan aplikasi -->
+                <div class="fitur">
+                    <h2>Keunggulan fitur</h2>
+                    <ol>
+                        <li>Menghitung berat badan</li>
+                        <li>Menentukan berat badan ideal atau tidak</li>
+                        <li>Mempersiapkan program penurunan</li>
+                    </ol>
+                </div>
+                
+                <!-- Informasi tambahan tentang kalkulator BMI -->
+                <p style="text-align: justify;">Kalkulator ini hanya boleh digunakan orang dewasa (wanita hamil atau menyusui tidak boleh mengandalkan
+                    pembacaan BMI ini) dan tidak ada tindakan yang harus diambil berdasarkan nilainya
+                    selain berkonsultasi dengan orang yang memenuhi syarat seperti dokter.
+                </p>
+                <p style="text-align: justify;">Kalkulator akan memberikan Anda gambaran tentang perbandingan berat badan Anda dengan nilai
+                    umum. Indeks Masa Tubuh (atau BMI) dihitung sebagai berat badan Anda (dalam kilogram) dibagi dengan
+                    kuadrat tinggi badan Anda (dalam meter) atau BMI = Kg/M<sup>2</sup>.
+                </p>
             </div>
-
-            <!-- Third Article -->
-            <article>
-                <p>Lorem Ipsum Dolor Sit Amet Adipiscing ....</p>
-            </article>
-        </section>
+            
+            <!-- Bagian hasil perhitungan BMI -->
+            <div class="hasil">
+                <h2>Hasil</h2>
+                <div class="tampil-hasil">
+                    <!-- Output hasil BMI -->
+                    <p><span id="tampilkan">Berat badan Anda</span></p>
+                    <p><span id="hasilBMI">0</span></p>
+                    <p><span id="tampilkan2">.....</span></p>
+                    <button class="tombol-download">Download Hasil BMI</button>
+                </div>
+                <p><span id="tampilkan3">Hasil BMI </span></p>
+                <p><span id="tampilkan4"></span></p>
+                <button class="tombol-konsultasi">Konsultasi Ahli Gizi Via Aplikasi</button>
+                <button class="tombol-registrasi">Registrasi Ahli Gizi</button>
+                <p style="text-align: justify;">BMI tidak sepenuhnya mewakili diagnosis menyeluruh dari kesehatan tubuh dan resiko penyakit 
+                    seseorang. Anda perlu konsultasi lebih lanjut mengenai resiko dan kekhawatiran Anda terkait dengan berat badan Anda.
+                </p>
+                
+                <!-- Informasi tambahan tentang risiko kesehatan -->
+                <div class="penutup">
+                    <p class="atas">Beberapa penyakit yang berasal dari kegemukan</p>
+                    <p style="text-align: center;">
+                        Diabetes<br>
+                        Hipertensi<br>
+                        Sakit Jantung<br>
+                        Osteoarthritis
+                    </p>
+                    <button class="konsultasi-dokter">Konsultasi Dokter Via Aplikasi</button>
+                    <button class="registrasi-dokter">Registrasi Online Sekarang</button>
+                </div>
+            </div>
+        </div>
     </main>
-
-    <!-- Footer Website -->
-    <footer>
-        <p>Made by Choirul Anam@2024</p>
-    </footer>
-    <script src="/js/script.js"></script>
+    
+    <!-- Footer halaman -->
+    <footer>Copyright Choirul Anam@2024</footer>
+    
+    <!-- Menghubungkan file JavaScript -->
+    <script src="js/script.js"></script>
 </body>
-
 </html>

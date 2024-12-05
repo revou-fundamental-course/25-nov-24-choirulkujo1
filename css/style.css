@@ -1,0 +1,133 @@
+/* Ini File CSS */
+
+body {
+    font-family: "Inter", sans-serif;
+}
+
+.main-header {
+    text-align: center;
+    background-color: #2d88a5;
+    padding: 16px;
+    border-radius: 15px;
+}
+
+h1 {
+    color:rgb(2, 8, 20);
+    font-weight: 900;
+}
+
+
+main {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.main-section {
+    width: 40%;
+    /* background-color: #2d88a5; */
+    padding: 40px;
+    margin: 16px;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #2d88a5;
+    color: white;
+}
+
+form {
+    background-color: #2d88a5;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+
+.form-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px;
+
+}
+
+#result-calculation {
+    font-size: 32px;   
+    font-weight: bold; 
+    text-align: center;
+}
+    
+#info-result{
+    font-size: 22px;
+}
+
+input[type=number] {
+    width: 40%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+    accent-color: #007BFF;
+    margin: 5px;
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+}
+
+
+.form-button-container {
+    margin-top: 32px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.tampil-hasil {
+    text-align: center;
+    background-color: #2d88a5;
+    padding: 0.5px;
+    width: 100%;
+    padding-bottom: 8px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+
+.container {
+    /* display: flex; */
+    /* flex-direction: row; */
+    justify-content: space-evenly;
+    max-width: 600px;
+    margin: 20px;
+    background: #f2f2f2;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768x) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 15px;
+        flex-direction: column;
+    }
+}
